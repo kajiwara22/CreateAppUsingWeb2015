@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="ans">
+<head>
+    <meta charset="UTF-8">
+    <title>Q&A</title>
+    <link rel="stylesheet" href="/bower_components/onsenui/build/css/onsenui.css"/>
+    <link rel="stylesheet" href="/bower_components/onsenui/build/css/onsen-css-components.css"/>
+</head>
+<script src="/bower_components/angular/angular.min.js"></script>
+<script src="/bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="/bower_components/onsenui/build/js/onsenui.min.js"></script>
+<script src="/javascripts/app.js"></script>
+<script src="/javascripts/questionController.js"></script>
+<script src="/javascripts/answerController.js"></script>
+
+<body>
+    <ons-navigator var="myNavigator" ng-controller="questionController">
+        <ons-page>
+            <ons-toolbar>
+                <div class="center">Q&A</div>
+            </ons-toolbar>
+            <ons-list>
+                <ons-list-item
+                        modifier="chevron"
+                        ons-lazy-repeat="ListGet"
+                        ng-click="showAnswer(answer)">
+                    <ons-row>
+                        <ons-col width="20%"></ons-col>
+                        <ons-col>
+                            {{answer.question}}
+                        </ons-col>
+                    </ons-row>
+                </ons-list-item>
+            </ons-list>
+        </ons-page>
+    </ons-navigator>
+</body>
+</html>

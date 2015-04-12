@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="ans">
+<head>
+    <meta charset="UTF-8">
+    <title>Answer</title>
+    <link rel="stylesheet" href="/bower_components/onsenui/build/css/onsenui.css"/>
+    <link rel="stylesheet" href="/bower_components/onsenui/build/css/onsen-css-components.css"/>
+</head>
+<script src="/bower_components/angular/angular.min.js"></script>
+<script src="/bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="/bower_components/onsenui/build/js/onsenui.min.js"></script>
+<script src="/javascripts/app.js"></script>
+<script src="/javascripts/questionController.js"></script>
+<script src="/javascripts/answerController.js"></script>
+<body>
+    <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">回答</div>
+    </ons-toolbar>
+    <ons-row>
+        <ons-col width="20%"></ons-col>
+        <ons-col>{{answer.question}}</ons-col>
+    </ons-row>
+
+    <ons-row>
+        <ons-col width="20%"></ons-col>
+        <ons-col>
+            <p style="white-space: pre-line">{{answer.answer}}</p>
+        </ons-col>
+    </ons-row>
+    <!--<pre>{{answer|json}}</pre>-->
+</body>
+</html>

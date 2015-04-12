@@ -1,0 +1,4 @@
+{
+  "question": "MySQL と MySQL Workbenchの違いってなんですか？",
+  "answer":"MYSQLはデータベースそのもの、\nMYSQL WorkbenchはMYSQLを操作するソフトです。"
+}
